@@ -37,6 +37,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#317EFB" />
       </Head>
       <Provider store={store}>
+        {/* @ts-ignore */}
         <Component {...pageProps} />
       </Provider>
     </>
