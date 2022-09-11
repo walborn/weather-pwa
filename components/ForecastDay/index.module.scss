@@ -1,0 +1,57 @@
+@import "variables";
+
+.root {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: $shadow-border;
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover {
+    box-shadow: $shadow-border-hover;
+    opacity: 1;
+    transition: opacity box-shadow ease 0.5s;
+  }
+}
+
+.date {
+  .day {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  time {
+    font-size: 14px;
+    color: $color-text-light;
+    white-space: nowrap;
+  }
+}
+
+.wind {
+  .icon {
+    opacity: 0.4;
+  }
+
+  > div {
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 25px;
+    vertical-align: top;
+  }
+}
+
+.forecast {
+  .condition {
+    display: inline-block;
+  }
+
+  .temperature {
+    display: inline-block;
+    padding-top: 10px;
+    vertical-align: top;
+
+    > div:last-child {
+      color: $color-text-light;
+    }
+  }
+}

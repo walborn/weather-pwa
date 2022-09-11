@@ -1,0 +1,62 @@
+.root {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 0 1px;
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover {
+    box-shadow: rgb(0 0 0 / 5%) 0 6px 24px 0, rgb(0 0 0 / 8%) 0 0 0 1px;
+    opacity: 1;
+    transition: opacity box-shadow ease 0.5s;
+  }
+}
+
+.date {
+  .day {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  time {
+    font-size: 14px;
+    color: #939cb0;
+    white-space: nowrap;
+  }
+}
+
+.wind {
+  .icon {
+    opacity: 0.4;
+  }
+
+  > div {
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 25px;
+    vertical-align: top;
+  }
+}
+
+.forecast {
+  .temperature {
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 32px;
+    vertical-align: top;
+  }
+
+  .condition {
+    display: inline-block;
+  }
+
+  .feels {
+    display: inline-block;
+    padding-top: 10px;
+    vertical-align: top;
+
+    > div:last-child {
+      color: #939cb0;
+    }
+  }
+}

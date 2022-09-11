@@ -1,0 +1,43 @@
+@import "variables";
+
+.location {
+  margin-bottom: 20px;
+
+  .name {
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  .country {
+    color: $color-text-light;
+  }
+}
+
+.current {
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  > li {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    object-fit: contain;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
