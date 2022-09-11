@@ -2,6 +2,8 @@
 
 .root {
   position: relative;
+  border-radius: 4px;
+  box-shadow: $shadow-border;
 
   input {
     position: relative;
@@ -11,8 +13,7 @@
     border: none;
     border-radius: 4px;
     outline: none;
-    box-shadow: $shadow-border;
-    transition: border-color 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
 
     &:focus {
       box-shadow: $shadow-border-hover;
