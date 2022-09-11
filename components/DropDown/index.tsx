@@ -2,6 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 
 import { ICity } from 'models/weather'
+import { Loading } from 'components/Loading'
 
 import styles from './index.module.scss'
 
@@ -13,7 +14,7 @@ interface Props {
 }
 
 export const DropDown:React.FC<Props> = ({ className, onClick, loading, values }) => {
-  if (loading) return <div className={styles.root}><ul><li>Loading...</li></ul></div>
+  if (loading) return <div className={styles.root}><ul><li><Loading /></li></ul></div>
   
   if (!Array.isArray(values) || values.length === 0) return (
     <div className={styles.root}>...</div>

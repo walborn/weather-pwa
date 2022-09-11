@@ -25,7 +25,7 @@ export const weatherApi = createApi({
           key,
           q: location,
           aqi: 'no',
-          days: 10,
+          days: 4,
         }
       })
     }),

@@ -4,6 +4,7 @@ import { ForecastDay } from 'components/ForecastDay'
 import { Current } from 'components/Current'
 
 import { IForecastResponse } from 'models/weather'
+import { Loading } from 'components/Loading'
 
 import styles from './index.module.scss'
 
@@ -13,7 +14,7 @@ interface Props {
 }
 
 export const Forecast: React.FC<Props> = ({ value, loading }) => {
-  if (loading) return <div>Loading forecast...</div>
+  if (loading) return <Loading />
   if (!value) return null
   const { location, current, forecast } = value
   const [ today, ...feature ] = forecast.forecastday
