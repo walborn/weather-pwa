@@ -25,8 +25,17 @@
   > li {
     position: relative;
     width: 100%;
-    background: #fff;
+    background: #ffffff;
     object-fit: contain;
+    border-radius: 10px;
+    box-shadow: $shadow-border;
+    opacity: 0.9;
+
+    &:hover {
+      box-shadow: $shadow-border-hover;
+      opacity: 1;
+      transition: opacity box-shadow ease 0.5s;
+    }
   }
 }
 

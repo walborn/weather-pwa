@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import { IForecastday } from 'models/weather'
 import windIcon from 'icons/wind.svg'
+
 import styles from './index.module.scss'
 
 interface Props {

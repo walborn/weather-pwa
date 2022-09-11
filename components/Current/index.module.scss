@@ -1,9 +1,9 @@
 .root {
   padding: 20px;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 5%) 0 0 0 1px;
-  cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.9;
 
   &:hover {
     box-shadow: rgb(0 0 0 / 5%) 0 6px 24px 0, rgb(0 0 0 / 8%) 0 0 0 1px;
@@ -25,16 +25,21 @@
   }
 }
 
-.wind {
-  .icon {
-    opacity: 0.4;
-  }
-
-  > div {
+ul.measures {
+  li {
     display: inline-block;
-    margin-left: 10px;
-    line-height: 25px;
-    vertical-align: top;
+    margin-right: 15px;
+
+    .icon {
+      opacity: 0.4;
+    }
+
+    > div {
+      display: inline-block;
+      margin-left: 10px;
+      line-height: 25px;
+      vertical-align: top;
+    }
   }
 }
 

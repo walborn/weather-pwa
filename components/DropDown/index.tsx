@@ -2,6 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 
 import { ICity } from 'models/weather'
+
 import styles from './index.module.scss'
 
 interface Props {

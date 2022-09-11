@@ -5,6 +5,9 @@ import clsx from 'clsx'
 
 import { ICurrent, IForecastday } from 'models/weather'
 import windIcon from 'icons/wind.svg'
+import humidityIcon from 'icons/humidity.svg'
+import pressureIcon from 'icons/pressure.svg'
+
 import styles from './index.module.scss'
 
 interface Props {
@@ -35,9 +38,19 @@ export const Current:React.FC<Props> = ({ className, value, forecast }) => (
         <div>Feels like {signed(value.feelslike_c)}˚</div>
       </div>
     </div>
-    <div className={styles.wind}>
-      <Image className={styles.icon} src={windIcon} alt="wind speed"/>
-      <div>{value.wind_kph} km/h</div>
-    </div>
+    <ul className={styles.measures}>
+      <li>
+        <Image className={styles.icon} src={windIcon} alt="wind speed"/>
+        <div>{value.wind_kph} km/h</div>
+      </li>
+      <li>
+        <Image className={styles.icon} src={humidityIcon} alt="humidity"/>
+        <div>{value.humidity}%</div>
+      </li>
+      <li>
+        <Image className={styles.icon} src={pressureIcon} alt="pressure"/>
+        <div>{value.pressure_mb} mmHg</div>
+      </li>
+    </ul>
   </div>
 )

@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import { useSearchCitiesQuery, useLazyFetchForecastQuery } from 'store/weather/api'
 import { useDebounce } from 'hooks/debounce'
@@ -7,6 +8,8 @@ import { Row } from 'components/Row'
 import { Input } from 'components/Input'
 import { Forecast } from 'components/Forecast'
 import { DropDown } from 'components/DropDown'
+
+import searchSVG from 'icons/search.svg'
 
 import styles from './index.module.scss'
 
@@ -39,7 +42,7 @@ const IndexPage = () => {
         className={styles.search}
         value={search}
         onChange={setSearch}
-        icon="🔍"
+        icon={<Image src={searchSVG} alt="Search" width={16} height={16} />}
       />
       {dropdown && <DropDown values={cities} loading={isFetching} onClick={handleClick}/>}
       <Forecast value={forecast.data} loading={forecast.isLoading} />
